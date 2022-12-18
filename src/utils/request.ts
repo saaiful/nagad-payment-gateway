@@ -16,8 +16,11 @@ export async function get<T>(url: string, additionalHeaders: IHeaders): Promise<
 		},
 	});
 	const data = await r.json();
-	if (data.reason) {
+	if (data.devMessage) {
 		throw new NagadException(data.devMessage);
+	}
+	if (data.reason) {
+		throw new NagadException(data.reason);
 	}
 	return data;
 }
