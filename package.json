@@ -64,7 +64,8 @@
 		"release": "changeset publish"
 	},
 	"dependencies": {
-		"node-fetch": "^2.6.7"
+		"node-fetch": "^2.6.7",
+		"pino": "^8.8.0"
 	},
 	"jest": {
 		"moduleFileExtensions": [
